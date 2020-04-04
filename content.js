@@ -708,7 +708,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     find: regex,
     replace: function (portion) {
       var e = document.createElement('span');
-      // e.style.color = 'red';
+      e.style.color = 'red';
       e.appendChild(document.createTextNode(request.replace));
       return e;
     },
