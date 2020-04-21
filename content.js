@@ -709,7 +709,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     replace: function (portion) {
       var e = document.createElement('span');
       e.appendChild(document.createTextNode(request.replace));
-      request.high === true ? (e.style.color = 'red') : null;
+      request.high === true ? (e.style.color = 'lightcoral') : null;
       return e;
     },
   });

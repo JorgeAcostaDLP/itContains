@@ -1,8 +1,10 @@
 document.addEventListener(
   'DOMContentLoaded',
   function () {
-    document.querySelector('button').addEventListener('click', onclick, false);
-
+    document.getElementById('count').addEventListener('click', onclick, false);
+    document
+      .getElementById('clear')
+      .addEventListener('click', onclickclear, false);
     function onclick() {
       search = document.getElementById('search').value;
       replace = document.getElementById('replace').value;
@@ -12,6 +14,9 @@ document.addEventListener(
         chrome.tabs.sendMessage(tabs[0].id, terms, setCount);
       });
     }
+    function onclickclear() {
+      document.getElementById('results').innerHTML = '';
+    }
   },
   false
 );
@@ -19,5 +24,6 @@ document.addEventListener(
 function setCount(res) {
   const div = document.createElement('div');
   div.textContent = `${res.count} ${res.term}s now ${res.replace}s`;
-  document.body.appendChild(div);
+  document.getElementById('results').appendChild(div);
+  res = {};
 }

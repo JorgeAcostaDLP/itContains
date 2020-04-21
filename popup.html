@@ -2,13 +2,20 @@
   <head>
     <meta charset="UTF-8" />
     <title>itContains</title>
+    <link rel="stylesheet" href="button.css" />
   </head>
   <body>
-    <input id="search" placeholder="Search Term" />
-    <input id="replace" placeholder="Replace Term" />
-    <input id="high" type="checkbox" /> Highlight
-    <button>Count Search Term</button>
-
+    <div>
+      <h2>Find & Replace</h2>
+      <input id="search" placeholder="search for..." />
+      <input id="replace" placeholder="replace with ..." />
+      <div>
+        <input id="high" type="checkbox" /> <label>Highlight</label><br />
+      </div>
+      <button id="count">Count</button>
+      <button id="clear">Clear</button>
+    </div>
+    <div id="results"></div>
     <script src="popup.js"></script>
   </body>
 </html>
