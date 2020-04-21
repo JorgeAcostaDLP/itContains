@@ -6,5 +6,6 @@
   "browser_action": {
     "default_popup": "popup.html",
     "default_title": "itContains"
-  }
+  },
+  "icons": { "16": "findreplace.png" }
 }
